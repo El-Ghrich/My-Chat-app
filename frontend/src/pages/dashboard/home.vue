@@ -15,10 +15,6 @@ import { io } from 'socket.io-client';
 
 const socket = io("http://127.0.0.1:3000/");
 
-const res = await axios.get('http://127.0.0.1:3000/hello')
-console.log(res.data)
+socket.emit('custom-event', 10, {hello : 'hekki'})
+
 </script>
-
-<style scoped>
-
-</style>
